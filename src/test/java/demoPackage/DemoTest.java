@@ -33,6 +33,8 @@ public class DemoTest
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"identifierNext\"]/span")));
 		driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/span")).click();
 		driver.findElement(By.name("password")).sendKeys("test");
+		System.out.println(driver.getTitle());
+		driver.findElement(By.id("//*[@id=\"passwordNext\"]/span/span")).click();
 	}
 	@AfterSuite
 	public void testDown()
